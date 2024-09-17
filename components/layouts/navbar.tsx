@@ -15,8 +15,8 @@ import clsx from "clsx";
 import { TbShoppingCart } from "react-icons/tb";
 import { FaRegHeart } from "react-icons/fa";
 
-import { SearchIcon } from "../commons/icons";
-import { ThemeSwitch } from "../commons/theme-switch";
+import { SearchIcon } from "../common/icons";
+import { ThemeSwitch } from "../common/theme-switch";
 
 import { siteConfig } from "@/config/site";
 
