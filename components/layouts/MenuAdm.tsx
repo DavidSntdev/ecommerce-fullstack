@@ -2,6 +2,7 @@ import {
   IconHome,
   IconShoppingBag,
   IconShoppingBagEdit,
+  IconShoppingBagMinus,
 } from "@tabler/icons-react";
 
 import MenuItem from "../components/MenuItem";
@@ -18,7 +19,7 @@ export default function MenuAdm() {
           url="/adm/gerenciar"
         />
         <MenuItem
-          icone={IconShoppingBagEdit}
+          icone={IconShoppingBagMinus}
           texto="Remover Produtos"
           url="/adm/remove"
         />
