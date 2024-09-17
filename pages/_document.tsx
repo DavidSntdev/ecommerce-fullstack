@@ -5,9 +5,7 @@ export default function Document() {
   return (
     <Html lang="pt-br">
       <Head />
-      <body
-        className={clsx("min-h-screen bg-background font-sans antialiased")}
-      >
+      <body className="min-h-screen bg-background font-sans antialiased">
         <Main />
         <NextScript />
       </body>

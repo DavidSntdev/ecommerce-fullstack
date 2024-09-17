@@ -2,7 +2,7 @@ import { Link } from "@nextui-org/link";
 
 import { Head } from "./head";
 
-import { Navbar } from "@/components/layout/navbar";
+import { Navbar } from "@/components/layouts/navbar";
 
 export default function DefaultLayout({
   children,
