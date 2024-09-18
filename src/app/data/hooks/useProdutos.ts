@@ -12,11 +12,12 @@ export default function UseProdutos() {
 
   async function salvar() {
     if (!produto) return;
-    await Backend.produtos.salvar(produto);
+    await Backend.produtos.salvar(produto as Produto);
     const produtos = await Backend.produtos.obter();
     setProdutos(produtos);
     setProduto(null);
   }
+
   async function excluir() {
     if (!produto || !produto.id) return;
     await Backend.produtos.excluir(produto.id);

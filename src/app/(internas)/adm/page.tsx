@@ -6,7 +6,7 @@ import AdmMenu from "@/app/components/layouts/MenuAdm";
 
 export default function Adm() {
   return (
-    <Pagina className="flex flex-col gap-10 w-full">
+    <Pagina className="flex gap-5">
       <AdmMenu />
       <AdmPagina />
     </Pagina>

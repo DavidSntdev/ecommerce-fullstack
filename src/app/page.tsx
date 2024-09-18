@@ -5,7 +5,7 @@ import MenuBar from "./layouts/MenuBar";
 
 export default function PaginaPrincipal() {
   return (
-    <Pagina>
+    <Pagina className="w-full">
       <MenuBar />
       <Conteudo />
       <Footer />

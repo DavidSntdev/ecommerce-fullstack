@@ -1,6 +1,6 @@
-import Produto from "@/core/model/Produto";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
+import Produto from "@/core/model/Produto";
 
 export interface FormularioProdutoProps {
   produto: Partial<Produto>;
@@ -67,7 +67,7 @@ export default function FormularioProduto(props: FormularioProdutoProps) {
       />
       <Textarea
         label="Descrição do produto"
-        value={props.produto.descricao}
+        value={props.produto.descricao ?? ""}
         classNames={{ input: "font-bold" }}
         onChange={(e) =>
           props.onChange?.({ ...props.produto, descricao: e.target.value })

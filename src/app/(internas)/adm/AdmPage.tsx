@@ -9,7 +9,7 @@ export default function AdmPagina() {
   const { produto, produtos, excluir, salvar, alterarProduto, cancelar } =
     UseProdutos();
   return (
-    <>
+    <div className="flex flex-col gap-5 p-5">
       <div className="flex justify-between items-center">
         <Titulo
           icone={IconShoppingBag}
@@ -36,6 +36,6 @@ export default function AdmPagina() {
       ) : (
         <ListaProduto produtos={produtos} onClick={alterarProduto} />
       )}
-    </>
+    </div>
   );
 }
