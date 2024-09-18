@@ -7,8 +7,8 @@ export interface PaginaProps {
 
 export default function Pagina(props: PaginaProps) {
   return (
-    <div className="flex min-h-screen max-h-full">
-      <main className={`p-7 ${props.className ?? ""}`}>{props.children}</main>
+    <div className="flex min-h-screen max-h-full w-screen">
+      <main className={`${props.className ?? "w-full"}`}>{props.children}</main>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-export default function MenuBar() {
+export default function Conteudo() {
   return (
     <div>
       <div></div>
