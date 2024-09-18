@@ -5,8 +5,11 @@ CREATE TABLE "Produto" (
     "price" REAL NOT NULL,
     "descricao" TEXT NOT NULL,
     "img" TEXT NOT NULL,
-    "estoque" BOOLEAN NOT NULL
+    "link" TEXT NOT NULL
 );
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Produto_id_key" ON "Produto"("id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Produto_link_key" ON "Produto"("link");

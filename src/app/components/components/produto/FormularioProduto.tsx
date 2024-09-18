@@ -15,11 +15,12 @@ export default function FormularioProduto(props: FormularioProdutoProps) {
     <div className="flex flex-col gap-5 w-[600px]">
       <Input
         type="text"
-        label="Id do Produto (link dele no site, tem que ser unico)"
+        label="Link do Produto ( tem que ser unico )"
         placeholder="calca-legging"
+        classNames={{ input: "font-bold" }}
         value={props.produto.id}
         onChange={(e) =>
-          props.onChange?.({ ...props.produto, id: e.target.value })
+          props.onChange?.({ ...props.produto, link: e.target.value })
         }
         labelPlacement="outside"
       />
@@ -29,6 +30,7 @@ export default function FormularioProduto(props: FormularioProdutoProps) {
         label="Nome do Produto"
         placeholder="Calca Legging"
         value={props.produto.nome}
+        classNames={{ input: "font-bold" }}
         onChange={(e) =>
           props.onChange?.({ ...props.produto, nome: e.target.value })
         }
@@ -40,6 +42,7 @@ export default function FormularioProduto(props: FormularioProdutoProps) {
         placeholder="0.00"
         labelPlacement="outside"
         value={props.produto.price?.toString()}
+        classNames={{ input: "font-bold" }}
         onChange={(e) =>
           props.onChange?.({
             ...props.produto,
@@ -57,6 +60,7 @@ export default function FormularioProduto(props: FormularioProdutoProps) {
         label="Imagem"
         placeholder="/assets/images/produtos/{url do produto}"
         labelPlacement="outside"
+        classNames={{ input: "font-bold" }}
         value={props.produto.img}
         onChange={(e) =>
           props.onChange?.({ ...props.produto, img: e.target.value })
@@ -65,6 +69,7 @@ export default function FormularioProduto(props: FormularioProdutoProps) {
       <Textarea
         label="Descrição do produto"
         value={props.produto.descricao}
+        classNames={{ input: "font-bold" }}
         onChange={(e) =>
           props.onChange?.({ ...props.produto, descricao: e.target.value })
         }

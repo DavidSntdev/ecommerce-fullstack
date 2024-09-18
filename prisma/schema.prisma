@@ -11,9 +11,10 @@ datasource db {
 }
 
 model Produto {
-  id    String @unique
+  id    String @unique @default(cuid())
   nome  String
   price Float
   descricao String
   img String
+  link String @unique
 }
