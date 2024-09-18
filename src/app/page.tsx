@@ -1,6 +1,6 @@
-import Conteudo from "./layouts/Conteudo";
-import Footer from "./layouts/Footer";
-import MenuBar from "./layouts/MenuBar";
+import Conteudo from "./layouts/page/Conteudo";
+import Footer from "./layouts/page/Footer";
+import MenuBar from "./layouts/page/MenuBar";
 import Pagina from "./layouts/Pagina";
 
 export default function PaginaPrincipal() {
