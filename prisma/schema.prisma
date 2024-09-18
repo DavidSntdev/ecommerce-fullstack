@@ -14,7 +14,7 @@ model Produto {
   id    String @unique @default(cuid())
   nome  String
   price Float
-  descricao String
+  descricao String?
   img String
   link String @unique
 }

@@ -18,7 +18,7 @@ export default function FormularioProduto(props: FormularioProdutoProps) {
         label="Link do Produto ( tem que ser unico )"
         placeholder="calca-legging"
         classNames={{ input: "font-bold" }}
-        value={props.produto.id}
+        value={props.produto.link}
         onChange={(e) =>
           props.onChange?.({ ...props.produto, link: e.target.value })
         }
@@ -39,7 +39,6 @@ export default function FormularioProduto(props: FormularioProdutoProps) {
       <Input
         type="number"
         label="Preço"
-        placeholder="0.00"
         labelPlacement="outside"
         value={props.produto.price?.toString()}
         classNames={{ input: "font-bold" }}

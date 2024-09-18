@@ -8,7 +8,7 @@ export interface ListaProdutoProps {
 
 export default function ListaProduto(props: ListaProdutoProps) {
   return (
-    <div className="flex flex-col gap-5 w-full">
+    <div className="grid grid-cols-4 gap-5 w-full">
       {props.produtos.map((produto: Produto) => {
         return (
           <LinhaProduto
