@@ -16,5 +16,4 @@ model Produto {
   price Float
   descricao String
   img String
-  estoque Boolean
 }

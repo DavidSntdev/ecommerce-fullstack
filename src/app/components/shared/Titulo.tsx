@@ -10,7 +10,7 @@ export default function Titulo(props: TituloProps) {
     <div className="flex gap-2 items-center">
       <props.icone size={60} stroke={1} />
       <div className="flex flex-col">
-        <h1 className="text-2xl font-black">{props.principal}</h1>
+        <h1 className="text-2xl  font-black">{props.principal}</h1>
         <h2 className="text-zinc-400">{props.secundario}</h2>
       </div>
     </div>

@@ -4,5 +4,4 @@ export default interface Produto {
   price: number;
   descricao: string;
   img: string;
-  estoque: boolean;
 }
