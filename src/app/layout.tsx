@@ -15,6 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      <head>
+        <link rel="icon" href="/faviconcart.ico" type="image/x-icon" />
+      </head>
       <body className="bg-black min-h-screen max-h-full">
         <NextUIProvider>{children}</NextUIProvider>
       </body>
