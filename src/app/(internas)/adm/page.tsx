@@ -1,13 +1,11 @@
 "use client";
 
-import Pagina from "@/app/components/layouts/Pagina";
-import AdmPagina from "./AdmPage";
-import AdmMenu from "@/app/components/layouts/MenuAdm";
+import Pagina from "@/app/layouts/Pagina";
+import AdmPagina from "./components/AdmPagina";
 
 export default function Adm() {
   return (
     <Pagina className="flex gap-5">
-      <AdmMenu />
       <AdmPagina />
     </Pagina>
   );

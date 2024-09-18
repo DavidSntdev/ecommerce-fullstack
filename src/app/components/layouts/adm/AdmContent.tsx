@@ -5,7 +5,7 @@ import UseProdutos from "@/app/data/hooks/useProdutos";
 import { Button } from "@nextui-org/react";
 import { IconPlus, IconShoppingBag } from "@tabler/icons-react";
 
-export default function AdmPagina() {
+export default function AdmContent() {
   const { produto, produtos, excluir, salvar, alterarProduto, cancelar } =
     UseProdutos();
   return (
