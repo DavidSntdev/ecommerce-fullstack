@@ -9,7 +9,7 @@ export default function Adm() {
   const [logado, setLogado] = useState<boolean>(false);
   return (
     <Pagina className="flex gap-5 w-full">
-      {logado ? <AdmPagina /> : <AdmLogin />}
+      {logado ? <AdmPagina /> : <AdmLogin setLogado={setLogado} />}
     </Pagina>
   );
 }
