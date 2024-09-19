@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./styles/globals.css";
 import { NextUIProvider } from "@nextui-org/react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Leide Lingeries",
@@ -18,8 +19,12 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/faviconcart.ico" type="image/x-icon" />
       </head>
-      <body className="bg-black min-h-screen max-h-full">
-        <NextUIProvider>{children}</NextUIProvider>
+      <body className="bg-default-foreground min-h-screen max-h-full">
+        <NextUIProvider>
+          <NextThemesProvider attribute="class" defaultTheme="light">
+            {children}
+          </NextThemesProvider>
+        </NextUIProvider>
       </body>
     </html>
   );

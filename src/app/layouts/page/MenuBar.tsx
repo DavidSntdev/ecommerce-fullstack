@@ -11,12 +11,13 @@ import {
 import Link from "next/link";
 import { TbShoppingCart } from "react-icons/tb";
 import { FaRegHeart } from "react-icons/fa";
+import { ThemeSwitch } from "@/app/components/common/themeSwitch";
 
 export default function MenuBar() {
   return (
     <NextUINavbar className="py-3" maxWidth="xl" position="sticky">
       <NavbarContent
-        className="hidden lg:flex basis-1/5 sm:basis-full"
+        className="hidden lg:flex basis-1/5 sm:basis-full text-default-100"
         justify="start"
       >
         <div className="hidden lg:flex gap-4 justify-start ml-2">
@@ -30,13 +31,13 @@ export default function MenuBar() {
         </div>
       </NavbarContent>
       <NavbarContent>
-        <NavbarBrand className="gap-3 w-full lg:justify-center">
+        <NavbarBrand className="gap-3 w-full lg:justify-center text-default-100">
           <Link
             className="flex gap-2 lg:flex-col lg:gap-0 items-center justify-center"
             href="/"
           >
-            <p className="font-bold text-inherit ">Leide</p>
-            <p className="font-bold text-inherit mt-[-px]">Lingeries</p>
+            <p className="font-bold text-inherit">Leide</p>
+            <p className="font-bold text-inherit mt-[-5px]">Lingeries</p>
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -44,7 +45,7 @@ export default function MenuBar() {
         className="hidden lg:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden lg:flex gap-4 text-default-500">
+        <NavbarItem className="hidden lg:flex gap-4 text-default-100">
           <Link href={siteConfig.cart.href}>
             <TbShoppingCart className="cursor-pointer" size={25} />
           </Link>
@@ -52,18 +53,20 @@ export default function MenuBar() {
             <FaRegHeart className="cursor-pointer" size={25} />
           </Link>
         </NavbarItem>
+        <ThemeSwitch />
       </NavbarContent>
 
-      <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
-        <Link className="text-default-500" href={siteConfig.cart.href}>
-          <TbShoppingCart
-            className="cursor-pointer text-default-500"
-            size={25}
-          />
+      <NavbarContent
+        className="lg:hidden basis-1 pl-4 text-default-100"
+        justify="end"
+      >
+        <Link href={siteConfig.cart.href}>
+          <TbShoppingCart className="cursor-pointer " size={25} />
         </Link>
-        <Link className="text-default-500" href={siteConfig.fav.href}>
-          <FaRegHeart className="cursor-pointer text-default-500" size={25} />
+        <Link href={siteConfig.fav.href}>
+          <FaRegHeart className="cursor-pointer" size={25} />
         </Link>
+        <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
 
