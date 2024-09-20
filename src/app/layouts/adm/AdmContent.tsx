@@ -20,7 +20,7 @@ export default function AdmContent() {
         {!produto && (
           <div className="flex gap-5 justify-end">
             <Button color="primary" onClick={() => alterarProduto({})}>
-              <CiCirclePlus />
+              <CiCirclePlus size={50} />
               <span>Novo Produto</span>
             </Button>
           </div>
