@@ -9,7 +9,7 @@ export interface LinhaProdutoProps {
 export default function LinhaProduto(props: LinhaProdutoProps) {
   return (
     <div
-      className="flex bg-zinc-900 gap-2 p-4 rounded-md cursor-pointer w-full"
+      className="flex bg-default-700  gap-2 rounded-md cursor-pointer w-full"
       onClick={() => props.onClick?.(props.produto)}
     >
       <span>
