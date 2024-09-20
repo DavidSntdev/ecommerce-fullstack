@@ -20,7 +20,7 @@ export default function Footer() {
               Leide Lingeries
             </h1>
           </div>
-          <div className="col-span-12 md:col-span-2 flex flex-col gap-1 items-center md:items-stretch text-center md:text-start">
+          <div className="col-span-12 md:col-span-3 flex flex-col gap-1 items-center md:items-stretch text-center md:text-start">
             <h1 className="text-xl md:text-2xl">Loja Online</h1>
             <p className="text-sm text-default-500">Entrega e Devoluções</p>
             <p className="text-sm text-default-500">Negociação via Whatsapp</p>
@@ -33,14 +33,8 @@ export default function Footer() {
             <p className="text-sm text-default-500">Desenvolvedor</p>
             <hr className="w-3/4 place-self-center border-1 border-default-300 md:hidden mt-3" />
           </div>
-        </div>
-        <div className="flex flex-col md:flex-row justify-between gap-2">
-          <div className="flex justify-center md:justify-start gap-3">
-            <Link isExternal href="https://wa.me/5511971647488">
-              <FaWhatsapp className="text-green-600 cursor-pointer" size={40} />
-            </Link>
-          </div>
-          <div className="flex order-3 md:order-2 flex-col items-center">
+          <div className="col-span-12 md:col-span-3 flex flex-col">
+            <h1 className="text-xl md:text-2xl">Desenvolvimento</h1>
             <p className="text-default-500 flex gap-1 items-center">
               Copyright <FaRegCopyright /> David Santos
             </p>
@@ -52,6 +46,13 @@ export default function Footer() {
             >
               <span className="text-default-500">Desenvolvido por</span>
               <p className="text-primary">David Santos</p>
+            </Link>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row justify-between gap-2">
+          <div className="flex justify-center md:justify-start gap-3">
+            <Link isExternal href="https://wa.me/5511971647488">
+              <FaWhatsapp className="text-green-600 cursor-pointer" size={40} />
             </Link>
           </div>
           <div className="flex order-2 justify-center items-center md:justify-end gap-3">

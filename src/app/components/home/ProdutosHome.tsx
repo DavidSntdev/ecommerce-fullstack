@@ -1,6 +1,6 @@
 "use client";
-import ProdutosItem from "./ProdutosHome/ProdutosItem";
 import UseProdutos from "@/app/data/hooks/useProdutos";
+import ProdutosItem from "../shared/ProdutosItem";
 
 export interface ProdutosHomeProps {
   titulo: string;
@@ -16,7 +16,7 @@ export default function ProdutosHome(props: ProdutosHomeProps) {
           <ProdutosItem
             key={produto.id}
             produtos={produto}
-            irParaCompra={`/produto/${produto.link}`}
+            irParaCompra={`/produtos/${produto.link}`}
           />
         ))}
       </div>

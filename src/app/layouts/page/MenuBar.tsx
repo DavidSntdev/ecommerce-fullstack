@@ -15,7 +15,11 @@ import { ThemeSwitch } from "@/app/components/common/themeSwitch";
 
 export default function MenuBar() {
   return (
-    <NextUINavbar className="py-3" maxWidth="xl" position="sticky">
+    <NextUINavbar
+      className="py-3 bg-default-900"
+      maxWidth="xl"
+      position="sticky"
+    >
       <NavbarContent
         className="hidden lg:flex basis-1/5 sm:basis-full text-default-100"
         justify="start"
