@@ -2,8 +2,9 @@ import FormularioProduto from "@/app/components/adm/produto/FormularioProduto";
 import ListaProduto from "@/app/components/adm/produto/ListaProduto";
 import Titulo from "@/app/components/shared/Titulo";
 import UseProdutos from "@/app/data/hooks/useProdutos";
-import { Button } from "@nextui-org/react";
-import { IconPlus, IconShoppingBag } from "@tabler/icons-react";
+import { FaShoppingBag } from "react-icons/fa";
+import { CiCirclePlus } from "react-icons/ci";
+import { Button } from "@nextui-org/button";
 
 export default function AdmContent() {
   const { produto, produtos, excluir, salvar, alterarProduto, cancelar } =
@@ -12,14 +13,14 @@ export default function AdmContent() {
     <div className="flex flex-col gap-5 p-5">
       <div className="flex justify-between items-center">
         <Titulo
-          icone={IconShoppingBag}
+          icone={FaShoppingBag}
           principal="Produtos"
           secundario="Estoque"
         />
         {!produto && (
           <div className="flex gap-5 justify-end">
             <Button color="primary" onClick={() => alterarProduto({})}>
-              <IconPlus />
+              <CiCirclePlus />
               <span>Novo Produto</span>
             </Button>
           </div>

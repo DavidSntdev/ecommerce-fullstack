@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@nextui-org/button";
-import { Image } from "@nextui-org/react";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 interface ImagemInicialProps {
