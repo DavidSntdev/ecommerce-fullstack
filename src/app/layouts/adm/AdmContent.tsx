@@ -10,7 +10,7 @@ export default function AdmContent() {
   const { produto, produtos, excluir, salvar, alterarProduto, cancelar } =
     UseProdutos();
   return (
-    <div className="flex flex-col gap-5 p-5">
+    <div className="flex flex-col gap-5 p-5 text-default-50">
       <div className="flex justify-between items-center">
         <Titulo
           icone={FaShoppingBag}
