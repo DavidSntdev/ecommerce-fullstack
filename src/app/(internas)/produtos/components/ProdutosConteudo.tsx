@@ -38,7 +38,7 @@ export default function ProdutosConteudo() {
             <ProdutosItem
               key={produto.id}
               produtos={produto}
-              irParaCompra={`/produto/${produto.link}`}
+              irParaCompra={`/produtos/${produto.link}`}
             />
           ))}
         </motion.div>

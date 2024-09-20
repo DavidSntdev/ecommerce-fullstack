@@ -13,7 +13,6 @@ export default function ProdutoCompra() {
   const [produto, setProduto] = useState<Produto | null>(null);
 
   useEffect(() => {
-    console.log("Link:", link);
     if (link) {
       const produtoEncontrado = produtos.find((prod) => prod.link === link);
       setProduto(produtoEncontrado || null);
