@@ -1,4 +1,5 @@
 import ImagemInicial from "@/app/components/home/ImagemInicial";
+import ProdutosHome from "@/app/components/home/ProdutosHome";
 
 export default function Conteudo() {
   return (
@@ -9,6 +10,7 @@ export default function Conteudo() {
         fundoMobile="/assets/images/fundoMobile.jpg"
         textButton="Ver Produtos"
       />
+      <ProdutosHome titulo="Lingeries" />
     </section>
   );
 }

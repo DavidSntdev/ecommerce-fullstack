@@ -1,17 +1,18 @@
-import Produto from "@/core/model/Produto";
+"use client";
 import ProdutosItem from "./ProdutosHome/ProdutosItem";
+import UseProdutos from "@/app/data/hooks/useProdutos";
 
 export interface ProdutosHomeProps {
-  produtos: Produto[];
   titulo: string;
 }
 
 export default function ProdutosHome(props: ProdutosHomeProps) {
+  const { produtos } = UseProdutos();
   return (
     <div className="flex flex-col w-full items-center gap-10 pb-32">
-      <h1 className="text-xl">{props.titulo}</h1>
+      <h1 className="text-5xl text-default-100">{props.titulo}</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full gap-3">
-        {props.produtos.slice(0, 5).map((produto) => (
+        {produtos.slice(0, 5).map((produto) => (
           <ProdutosItem
             key={produto.id}
             produtos={produto}
