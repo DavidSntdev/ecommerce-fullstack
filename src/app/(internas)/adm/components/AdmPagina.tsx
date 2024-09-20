@@ -1,5 +1,5 @@
-import AdmContent from "@/app/components/layouts/adm/AdmContent";
-import AdmMenu from "@/app/components/layouts/adm/AdmMenu";
+import AdmContent from "@/app/layouts/adm/AdmContent";
+import AdmMenu from "@/app/layouts/adm/AdmMenu";
 
 export default function AdmPagina() {
   return (

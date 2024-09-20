@@ -1,5 +1,5 @@
+import MenuItem from "@/app/components/adm/MenuItem";
 import { IconHome, IconShoppingBag } from "@tabler/icons-react";
-import MenuItem from "../../components/adm/MenuItem";
 
 export default function AdmMenu() {
   return (

@@ -31,13 +31,13 @@ export default function MenuBar() {
         </div>
       </NavbarContent>
       <NavbarContent>
-        <NavbarBrand className="gap-3 w-full lg:justify-center text-default-100">
+        <NavbarBrand className="gap-3 w-full lg:justify-center text-default-100 text-xl">
           <Link
             className="flex gap-2 lg:flex-col lg:gap-0 items-center justify-center"
             href="/"
           >
             <p className="font-bold text-inherit">Leide</p>
-            <p className="font-bold text-inherit mt-[-5px]">Lingeries</p>
+            <p className="font-bold text-inherit lg:mt-[-10px]">Lingeries</p>
           </Link>
         </NavbarBrand>
       </NavbarContent>

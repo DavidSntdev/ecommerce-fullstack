@@ -5,7 +5,7 @@ import Pagina from "./layouts/Pagina";
 
 export default function PaginaPrincipal() {
   return (
-    <Pagina className="w-full">
+    <Pagina className="w-full max-w-7xl mx-auto">
       <MenuBar />
       <Conteudo />
       <Footer />

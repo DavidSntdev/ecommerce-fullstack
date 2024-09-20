@@ -1,5 +1,5 @@
-import FormularioProduto from "@/app/components/components/produto/FormularioProduto";
-import ListaProduto from "@/app/components/components/produto/ListaProduto";
+import FormularioProduto from "@/app/components/adm/produto/FormularioProduto";
+import ListaProduto from "@/app/components/adm/produto/ListaProduto";
 import Titulo from "@/app/components/shared/Titulo";
 import UseProdutos from "@/app/data/hooks/useProdutos";
 import { Button } from "@nextui-org/react";
