@@ -17,9 +17,14 @@ export default function useFavorito() {
     return favorito.listarFavoritos();
   };
 
+  const favoritosPorId = (id: string) => {
+    return favorito.favoritosPorId(id);
+  };
+
   return {
     adicionarProduto,
     removerProduto,
     listarFavoritos,
+    favoritosPorId,
   };
 }

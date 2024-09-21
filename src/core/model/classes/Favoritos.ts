@@ -17,6 +17,10 @@ class Favoritos implements Favorito {
   listarFavoritos(): Produto[] {
     return this.favorito;
   }
+
+  favoritosPorId(id: string): boolean {
+    return this.favorito.some((produto) => produto.id === id);
+  }
 }
 
 export default Favoritos;

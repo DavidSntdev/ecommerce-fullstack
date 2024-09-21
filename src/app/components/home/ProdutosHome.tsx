@@ -15,7 +15,7 @@ export default function ProdutosHome(props: ProdutosHomeProps) {
         {produtos.slice(0, 5).map((produto) => (
           <ProdutosItem
             key={produto.id}
-            produtos={produto}
+            produto={produto}
             irParaCompra={`/produtos/${produto.link}`}
           />
         ))}

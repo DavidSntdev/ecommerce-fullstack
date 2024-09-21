@@ -37,7 +37,7 @@ export default function ProdutosConteudo() {
           {currentProdutos.map((produto) => (
             <ProdutosItem
               key={produto.id}
-              produtos={produto}
+              produto={produto}
               irParaCompra={`/produtos/${produto.link}`}
             />
           ))}
