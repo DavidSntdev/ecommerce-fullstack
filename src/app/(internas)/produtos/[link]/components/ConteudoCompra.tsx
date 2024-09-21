@@ -1,5 +1,5 @@
 import CompraTexto from "@/app/components/compra/CompraTexto";
-import Produto from "@/core/model/Produto";
+import Produto from "@/core/model/interfaces/Produto";
 import Image from "next/image";
 export interface ConteudoCompraProps {
   produto: Produto;

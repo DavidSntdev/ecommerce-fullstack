@@ -1,5 +1,5 @@
 import Backend from "@/backend";
-import Produto from "@/core/model/Produto";
+import Produto from "@/core/model/interfaces/Produto";
 import { useEffect, useState } from "react";
 
 export default function UseProdutos() {

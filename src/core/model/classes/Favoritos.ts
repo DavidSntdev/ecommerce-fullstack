@@ -1,0 +1,22 @@
+import Favorito from "../interfaces/Favorito";
+import Produto from "../interfaces/Produto";
+
+class Favoritos implements Favorito {
+  favorito: Produto[] = [];
+
+  adicionarProduto(produto: Produto): void {
+    if (!this.favorito.some((item) => item.id === produto.id)) {
+      this.favorito.push(produto);
+    }
+  }
+
+  removerProduto(id: string): void {
+    this.favorito = this.favorito.filter((produto) => produto.id !== id);
+  }
+
+  listarFavoritos(): Produto[] {
+    return this.favorito;
+  }
+}
+
+export default Favoritos;

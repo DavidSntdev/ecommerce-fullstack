@@ -1,5 +1,5 @@
 import LinhaProduto from "./LinhaProduto";
-import Produto from "@/core/model/Produto";
+import Produto from "@/core/model/interfaces/Produto";
 
 export interface ListaProdutoProps {
   produtos: Produto[];

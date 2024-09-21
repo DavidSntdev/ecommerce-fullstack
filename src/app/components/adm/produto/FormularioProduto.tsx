@@ -1,6 +1,6 @@
 import { Input, Textarea } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
-import Produto from "@/core/model/Produto";
+import Produto from "@/core/model/interfaces/Produto";
 
 export interface FormularioProdutoProps {
   produto: Partial<Produto>;

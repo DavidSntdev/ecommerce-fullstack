@@ -2,7 +2,7 @@
 import Id from "@/core/utils/id";
 import RepositorioProduto from "./RepositorioProduto";
 
-import Produto from "@/core/model/Produto";
+import Produto from "@/core/model/interfaces/Produto";
 
 export default async function salvarProduto(produto: Partial<Produto>) {
   const novoProduto = {

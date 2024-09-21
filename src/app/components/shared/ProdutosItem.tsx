@@ -1,4 +1,4 @@
-import Produto from "@/core/model/Produto";
+import Produto from "@/core/model/interfaces/Produto";
 import { Card, CardBody } from "@nextui-org/card";
 import Image from "next/image";
 import Link from "next/link";
