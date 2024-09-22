@@ -27,9 +27,13 @@ export default function Coracao(props: ConteudoCompraProps) {
     <FaHeart
       size={props.size || 25}
       onClick={handleFavoritoClick}
-      className="text-red-700"
+      className="text-red-700 cursor-pointer"
     />
   ) : (
-    <FaRegHeart size={props.size || 25} onClick={handleFavoritoClick} />
+    <FaRegHeart
+      size={props.size || 25}
+      onClick={handleFavoritoClick}
+      className="cursor-pointer"
+    />
   );
 }

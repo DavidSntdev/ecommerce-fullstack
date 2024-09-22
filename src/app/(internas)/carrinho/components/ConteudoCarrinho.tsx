@@ -1,5 +1,5 @@
 "use client";
-import ProdutosItem from "@/app/components/shared/ProdutosItem";
+import ProdutosItem from "@/app/components/common/ProdutosItem";
 import { useCarrinho } from "@/context/CarrinhoContext";
 import Produto from "@/core/model/interfaces/Produto";
 

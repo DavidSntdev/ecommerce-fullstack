@@ -1,5 +1,6 @@
 "use client";
-import ProdutosItem from "@/app/components/shared/ProdutosItem";
+import ProdutosItem from "@/app/components/common/ProdutosItem";
+import Titulo from "@/app/components/shared/Titulos";
 import { useFavoritos } from "@/context/FavoritosContext";
 import Produto from "@/core/model/interfaces/Produto";
 
@@ -9,6 +10,7 @@ export default function ConteudoFav() {
 
   return (
     <section className="flex flex-col items-center gap-4 py-8 md:py-10">
+      <Titulo titulo="Favoritos" />
       {favoritos.length === 0 ? (
         <p className="text-lg text-default-50">Nenhum produto nos favoritos</p>
       ) : (

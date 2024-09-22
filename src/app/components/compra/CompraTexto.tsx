@@ -3,6 +3,8 @@ import { Button } from "@nextui-org/button";
 import { useState } from "react";
 import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
 import { IoLogoWhatsapp } from "react-icons/io";
+import Coracao from "../common/Coracao";
+import Mochila from "../common/Mochila";
 
 export default function CompraTexto(props: ConteudoCompraProps) {
   const [quantidade, setQuantidade] = useState<number>(1);
@@ -16,7 +18,7 @@ export default function CompraTexto(props: ConteudoCompraProps) {
   if (!props.produto) return <div>Produto não disponível</div>;
 
   return (
-    <div className="md:w-1/2 flex flex-col justify-between w-[300px] py-5">
+    <div className="md:w-1/2 flex flex-col justify-between w-full py-5">
       <div className="flex flex-col gap-2">
         <h1 className="text-xl font-bold">
           {props.produto.nome || "Produto não encontrado"}
@@ -52,6 +54,10 @@ export default function CompraTexto(props: ConteudoCompraProps) {
               <CiCirclePlus className="cursor-pointer" size={40} />
             </button>
           </div>
+          <div className="flex sm:hidden items-center">
+            <Mochila produto={props.produto} size={35} />
+            <Coracao produto={props.produto} size={35} />
+          </div>
         </div>
         <div className="flex w-full gap-3 items-center">
           <Button
@@ -74,6 +80,10 @@ export default function CompraTexto(props: ConteudoCompraProps) {
               size={20}
             />
           </Button>
+          <div className="hidden sm:flex gap-5 justify-around">
+            <Mochila produto={props.produto} size={35} />
+            <Coracao produto={props.produto} size={35} />
+          </div>
         </div>
       </div>
     </div>

@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Pagination } from "@nextui-org/pagination";
 import { useState } from "react";
 import UseProdutos from "@/hooks/useProdutos";
-import ProdutosItem from "@/app/components/shared/ProdutosItem";
 import Titulo from "@/app/components/shared/Titulos";
+import ProdutosItem from "@/app/components/common/ProdutosItem";
 
 export default function ProdutosConteudo() {
   const [pagina, setPagina] = useState<number>(1);

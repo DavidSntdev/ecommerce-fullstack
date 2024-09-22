@@ -1,6 +1,6 @@
 "use client";
 import UseProdutos from "@/hooks/useProdutos";
-import ProdutosItem from "../shared/ProdutosItem";
+import ProdutosItem from "../common/ProdutosItem";
 
 export interface ProdutosHomeProps {
   titulo: string;

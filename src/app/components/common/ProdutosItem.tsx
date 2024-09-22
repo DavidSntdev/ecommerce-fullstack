@@ -2,7 +2,7 @@ import Produto from "@/core/model/interfaces/Produto";
 import { Card, CardBody } from "@nextui-org/card";
 import Image from "next/image";
 import Link from "next/link";
-import Coracao from "../favorito/Coracao";
+import Coracao from "./Coracao";
 
 export interface ProdutosItemProps {
   produto: Produto;
