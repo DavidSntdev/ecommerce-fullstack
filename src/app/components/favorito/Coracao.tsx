@@ -24,8 +24,12 @@ export default function Coracao(props: ConteudoCompraProps) {
   };
 
   return isFavorito ? (
-    <FaHeart size={25} onClick={handleFavoritoClick} className="text-red-700" />
+    <FaHeart
+      size={props.size || 25}
+      onClick={handleFavoritoClick}
+      className="text-red-700"
+    />
   ) : (
-    <FaRegHeart size={25} onClick={handleFavoritoClick} />
+    <FaRegHeart size={props.size || 25} onClick={handleFavoritoClick} />
   );
 }

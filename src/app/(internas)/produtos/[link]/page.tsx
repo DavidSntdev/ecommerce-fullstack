@@ -24,7 +24,7 @@ export default function ProdutoCompra() {
   }
 
   return (
-    <LayoutPrincipal>
+    <LayoutPrincipal className="w-full">
       <ConteudoCompra produto={produto} />
     </LayoutPrincipal>
   );

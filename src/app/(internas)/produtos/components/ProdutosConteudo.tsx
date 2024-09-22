@@ -4,6 +4,7 @@ import { Pagination } from "@nextui-org/pagination";
 import { useState } from "react";
 import UseProdutos from "@/hooks/useProdutos";
 import ProdutosItem from "@/app/components/shared/ProdutosItem";
+import Titulo from "@/app/components/shared/Titulos";
 
 export default function ProdutosConteudo() {
   const [pagina, setPagina] = useState<number>(1);
@@ -24,7 +25,8 @@ export default function ProdutosConteudo() {
   );
 
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+    <section className="flex flex-col items-center justify-center gap-4 py-4">
+      <Titulo titulo="Lingeries" />
       <AnimatePresence>
         <motion.div
           key={pagina}

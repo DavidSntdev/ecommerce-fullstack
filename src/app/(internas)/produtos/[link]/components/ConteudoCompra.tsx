@@ -3,11 +3,12 @@ import Produto from "@/core/model/interfaces/Produto";
 import Image from "next/image";
 export interface ConteudoCompraProps {
   produto: Produto;
+  size?: number;
 }
 
 export default function ConteudoCompra(props: ConteudoCompraProps) {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 px-10 text-default-50">
+    <section className="flex flex-col items-center justify-center gap-4 py-6 px-10 text-default-50">
       <div className="flex gap-5 w-full flex-col md:flex-row justify-between items-center md:items-stretch">
         <div className="lg:w-1/2 flex justify-center">
           {props.produto.img && (

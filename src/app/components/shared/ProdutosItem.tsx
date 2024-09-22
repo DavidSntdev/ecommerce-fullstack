@@ -36,6 +36,9 @@ export default function ProdutosItem(props: ProdutosItemProps) {
             <p>{props.produto.nome}</p>
             <p className="block sm:hidden">R${props.produto.price}</p>
           </Link>
+          <div className="flex sm:hidden place-self-center">
+            <Coracao produto={props.produto} />
+          </div>
           <div className="hidden sm:flex flex-row justify-between">
             <p>R$ {props.produto.price}</p>
             <Coracao produto={props.produto} />
