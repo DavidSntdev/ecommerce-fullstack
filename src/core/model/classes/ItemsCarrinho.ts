@@ -1,16 +1,25 @@
 import Carrinho from "../interfaces/Carrinho";
 import Produto from "../interfaces/Produto";
 
-class ItemsCarrinho implements Carrinho {
-  carrinho: Produto[];
+interface ProdutoCarrinho extends Produto {
+  quantidade: number;
+}
 
-  constructor(carrinho: Produto[] = []) {
+class ItemsCarrinho implements Carrinho {
+  carrinho: ProdutoCarrinho[];
+
+  constructor(carrinho: ProdutoCarrinho[] = []) {
     this.carrinho = carrinho;
   }
 
-  adicionarProduto(produto: Produto): void {
-    if (!this.carrinho.some((item) => item.id === produto.id)) {
-      this.carrinho.push(produto);
+  adicionarProduto(produto: Produto, quantidade: number = 1): void {
+    const produtoExistente = this.carrinho.find(
+      (item) => item.id === produto.id
+    );
+    if (produtoExistente) {
+      produtoExistente.quantidade += quantidade;
+    } else {
+      this.carrinho.push({ ...produto, quantidade });
     }
   }
 
@@ -18,8 +27,23 @@ class ItemsCarrinho implements Carrinho {
     this.carrinho = this.carrinho.filter((produto) => produto.id !== id);
   }
 
-  listarCarrinho(): Produto[] {
+  atualizarQuantidade(id: string, quantidade: number): void {
+    const produto = this.carrinho.find((item) => item.id === id);
+    if (produto) {
+      produto.quantidade = quantidade;
+      if (produto.quantidade <= 0) {
+        this.removerProduto(id);
+      }
+    }
+  }
+
+  listarCarrinho(): ProdutoCarrinho[] {
     return this.carrinho;
+  }
+
+  quantidadeProduto(id: string): number {
+    const produto = this.carrinho.find((item) => item.id === id);
+    return produto ? produto.quantidade : 0;
   }
 }
 

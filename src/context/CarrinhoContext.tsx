@@ -8,13 +8,9 @@ import {
 } from "react";
 import ItemsCarrinho from "@/core/model/classes/ItemsCarrinho";
 import Produto from "@/core/model/interfaces/Produto";
-
-const CarrinhoContext = createContext<{
-  adicionarProduto: (produto: Produto) => void;
-  removerProduto: (id: string) => void;
-  listarCarrinho: () => Produto[];
-  carrinhoPorId: (id: string) => boolean;
-} | null>(null);
+interface CarrinhoProviderProps {
+  children: ReactNode;
+}
 
 export const useCarrinho = () => {
   const context = useContext(CarrinhoContext);
@@ -24,9 +20,14 @@ export const useCarrinho = () => {
   return context;
 };
 
-interface CarrinhoProviderProps {
-  children: ReactNode;
-}
+const CarrinhoContext = createContext<{
+  adicionarProduto: (produto: Produto, quantidade?: number) => void;
+  removerProduto: (id: string) => void;
+  atualizarQuantidade: (id: string, quantidade: number) => void;
+  listarCarrinho: () => (Produto & { quantidade: number })[];
+  carrinhoPorId: (id: string) => boolean;
+  quantidadeProduto: (id: string) => number; // Nova função
+} | null>(null);
 
 export const CarrinhoProvider = ({ children }: CarrinhoProviderProps) => {
   const [carrinho, setCarrinho] = useState<ItemsCarrinho | null>(null);
@@ -48,9 +49,9 @@ export const CarrinhoProvider = ({ children }: CarrinhoProviderProps) => {
     }
   }, [carrinho]);
 
-  const adicionarProduto = (produto: Produto) => {
+  const adicionarProduto = (produto: Produto, quantidade: number = 1) => {
     if (carrinho) {
-      carrinho.adicionarProduto(produto);
+      carrinho.adicionarProduto(produto, quantidade);
       setCarrinho(new ItemsCarrinho(carrinho.listarCarrinho()));
     }
   };
@@ -62,12 +63,23 @@ export const CarrinhoProvider = ({ children }: CarrinhoProviderProps) => {
     }
   };
 
-  const listarCarrinho = () => {
-    return carrinho ? carrinho.listarCarrinho() : [];
+  const atualizarQuantidade = (id: string, quantidade: number) => {
+    if (carrinho) {
+      carrinho.atualizarQuantidade(id, quantidade);
+      setCarrinho(new ItemsCarrinho(carrinho.listarCarrinho()));
+    }
   };
 
   const carrinhoPorId = (id: string) => {
     return carrinho ? carrinho.carrinho.some((item) => item.id === id) : false;
+  };
+
+  const listarCarrinho = () => {
+    return carrinho ? carrinho.listarCarrinho() : [];
+  };
+
+  const quantidadeProduto = (id: string) => {
+    return carrinho ? carrinho.quantidadeProduto(id) : 0;
   };
 
   return (
@@ -75,8 +87,10 @@ export const CarrinhoProvider = ({ children }: CarrinhoProviderProps) => {
       value={{
         adicionarProduto,
         removerProduto,
+        atualizarQuantidade,
         listarCarrinho,
         carrinhoPorId,
+        quantidadeProduto,
       }}
     >
       {children}

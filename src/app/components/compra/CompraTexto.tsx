@@ -55,7 +55,11 @@ export default function CompraTexto(props: ConteudoCompraProps) {
             </button>
           </div>
           <div className="flex sm:hidden items-center">
-            <Mochila produto={props.produto} size={35} />
+            <Mochila
+              produto={props.produto}
+              size={35}
+              quantidade={quantidade}
+            />
             <Coracao produto={props.produto} size={35} />
           </div>
         </div>
@@ -81,7 +85,11 @@ export default function CompraTexto(props: ConteudoCompraProps) {
             />
           </Button>
           <div className="hidden sm:flex gap-5 justify-around">
-            <Mochila produto={props.produto} size={35} />
+            <Mochila
+              produto={props.produto}
+              size={35}
+              quantidade={quantidade}
+            />
             <Coracao produto={props.produto} size={35} />
           </div>
         </div>

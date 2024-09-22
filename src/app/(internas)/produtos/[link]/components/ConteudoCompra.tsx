@@ -4,6 +4,7 @@ import Image from "next/image";
 export interface ConteudoCompraProps {
   produto: Produto;
   size?: number;
+  quantidade?: number;
 }
 
 export default function ConteudoCompra(props: ConteudoCompraProps) {
