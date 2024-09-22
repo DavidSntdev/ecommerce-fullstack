@@ -1,10 +1,10 @@
 "use client";
 import ProdutosItem from "@/app/components/shared/ProdutosItem";
-import useFavorito from "@/app/data/hooks/useFavorito";
+import { useFavoritos } from "@/context/FavoritosContext";
 import Produto from "@/core/model/interfaces/Produto";
 
 export default function ConteudoFav() {
-  const { listarFavoritos } = useFavorito();
+  const { listarFavoritos } = useFavoritos();
   const favoritos = listarFavoritos();
 
   return (

@@ -1,5 +1,4 @@
 "use client";
-
 import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
 import { useState, useEffect } from "react";

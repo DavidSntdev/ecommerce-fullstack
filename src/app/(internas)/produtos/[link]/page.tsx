@@ -1,6 +1,6 @@
 "use client";
 
-import UseProdutos from "@/app/data/hooks/useProdutos";
+import UseProdutos from "@/hooks/useProdutos";
 import LayoutPrincipal from "@/app/layouts/LayoutPrincipal";
 import Produto from "@/core/model/interfaces/Produto";
 import { useParams } from "next/navigation";

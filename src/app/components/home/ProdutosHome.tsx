@@ -1,5 +1,5 @@
 "use client";
-import UseProdutos from "@/app/data/hooks/useProdutos";
+import UseProdutos from "@/hooks/useProdutos";
 import ProdutosItem from "../shared/ProdutosItem";
 
 export interface ProdutosHomeProps {

@@ -2,7 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Pagination } from "@nextui-org/pagination";
 import { useState } from "react";
-import UseProdutos from "@/app/data/hooks/useProdutos";
+import UseProdutos from "@/hooks/useProdutos";
 import ProdutosItem from "@/app/components/shared/ProdutosItem";
 
 export default function ProdutosConteudo() {

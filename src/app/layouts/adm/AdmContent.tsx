@@ -1,7 +1,7 @@
 import FormularioProduto from "@/app/components/adm/produto/FormularioProduto";
 import ListaProduto from "@/app/components/adm/produto/ListaProduto";
 import Titulo from "@/app/components/shared/Titulo";
-import UseProdutos from "@/app/data/hooks/useProdutos";
+import UseProdutos from "@/hooks/useProdutos";
 import { FaShoppingBag } from "react-icons/fa";
 import { CiCirclePlus } from "react-icons/ci";
 import { Button } from "@nextui-org/button";
