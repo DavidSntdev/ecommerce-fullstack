@@ -1,5 +1,3 @@
-"use client";
-
 import { ConteudoCompraProps } from "@/app/(internas)/produtos/[link]/components/ConteudoCompra";
 import useFavorito from "@/app/data/hooks/useFavorito";
 import { useEffect, useState } from "react";
