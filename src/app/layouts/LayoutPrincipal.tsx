@@ -10,9 +10,9 @@ export interface LayoutPrincipalProps {
 
 export default function LayoutPrincipal(props: LayoutPrincipalProps) {
   return (
-    <Pagina className="w-full max-w-7xl mx-auto flex flex-col justify-between">
+    <Pagina className="w-full mx-auto flex flex-col justify-between">
       <MenuBar />
-      <div className={`${props.className}`}>{props.children}</div>
+      <div className={`${props.className} max-w-7xl place-self-center`}>{props.children}</div>
       <Footer />
     </Pagina>
   );

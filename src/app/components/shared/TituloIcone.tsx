@@ -1,11 +1,11 @@
 import { ElementType } from "react";
 
-export interface TituloProps {
+export interface TituloIconeProps {
   principal: string;
-  secundario: string;
+  secundario?: string;
   icone: ElementType;
 }
-export default function Titulo(props: TituloProps) {
+export default function TituloIcone(props: TituloIconeProps) {
   return (
     <div className="flex gap-2 items-center">
       <props.icone size={60} stroke={1} className="text-default-300" />
@@ -13,7 +13,9 @@ export default function Titulo(props: TituloProps) {
         <h1 className="text-2xl text-default-300  font-black">
           {props.principal}
         </h1>
-        <h2 className="text-default-500">{props.secundario}</h2>
+        {props.secundario && (
+          <h2 className="text-default-500">{props.secundario}</h2>
+        )}
       </div>
     </div>
   );

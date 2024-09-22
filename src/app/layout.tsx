@@ -3,6 +3,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { FavoritosProvider } from "@/context/FavoritosContext";
 import "./styles/globals.css";
+import { CarrinhoProvider } from "@/context/CarrinhoContext";
 
 export const metadata: Metadata = {
   title: "Leide Lingeries",
@@ -23,7 +24,9 @@ export default function RootLayout({
       <body className="bg-default-900 min-h-screen max-h-full">
         <NextUIProvider>
           <NextThemesProvider attribute="class" defaultTheme="light">
-            <FavoritosProvider>{children}</FavoritosProvider>
+            <FavoritosProvider>
+              <CarrinhoProvider>{children}</CarrinhoProvider>
+            </FavoritosProvider>
           </NextThemesProvider>
         </NextUIProvider>
       </body>

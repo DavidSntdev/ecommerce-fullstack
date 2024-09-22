@@ -16,7 +16,7 @@ import { ThemeSwitch } from "@/app/components/common/themeSwitch";
 export default function MenuBar() {
   return (
     <NextUINavbar
-      className="py-3 bg-default-900"
+      className="py-3 bg-default-foreground"
       maxWidth="xl"
       position="sticky"
     >

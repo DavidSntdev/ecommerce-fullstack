@@ -2,7 +2,11 @@ import Carrinho from "../interfaces/Carrinho";
 import Produto from "../interfaces/Produto";
 
 class ItemsCarrinho implements Carrinho {
-  carrinho: Produto[] = [];
+  carrinho: Produto[];
+
+  constructor(carrinho: Produto[] = []) {
+    this.carrinho = carrinho;
+  }
 
   adicionarProduto(produto: Produto): void {
     if (!this.carrinho.some((item) => item.id === produto.id)) {
