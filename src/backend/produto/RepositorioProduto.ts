@@ -7,10 +7,22 @@ export default class RepositorioProduto {
     return await this.db.produto.findMany();
   }
   static async salvar(produto: Produto): Promise<Produto> {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { link, id, ...produtoData } = produto;
+
+    if (!link) {
+      throw new Error("O campo 'link' é obrigatório.");
+    }
+
     return await this.db.produto.upsert({
-      where: { id: produto.id },
-      update: produto,
-      create: produto,
+      where: { link },
+      update: {
+        ...produtoData,
+      },
+      create: {
+        ...produtoData,
+        link,
+      },
     });
   }
 

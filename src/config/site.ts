@@ -5,12 +5,12 @@ export const siteConfig = {
   description: "Uma loja para você encontrar as melhores lingeries do mercado",
   navItems: [
     {
-      label: "Produtos",
-      href: "/produtos",
+      label: "Pagina Inicial",
+      href: "/",
     },
     {
-      label: "Sobre Mim",
-      href: "/sobre",
+      label: "Produtos",
+      href: "/produtos",
     },
   ],
   navMenuItems: [
@@ -29,10 +29,6 @@ export const siteConfig = {
     {
       label: "Favoritos",
       href: "/favoritos",
-    },
-    {
-      label: "Sobre Mim",
-      href: "/sobre",
     },
   ],
   cart: {

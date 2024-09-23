@@ -3,7 +3,7 @@ import LayoutPrincipal from "@/app/layouts/LayoutPrincipal";
 
 export default function ProdutosPage() {
   return (
-    <LayoutPrincipal>
+    <LayoutPrincipal className="w-full">
       <ProdutosConteudo />
     </LayoutPrincipal>
   );

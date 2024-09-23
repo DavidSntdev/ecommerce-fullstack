@@ -16,7 +16,7 @@ import { ThemeSwitch } from "@/app/components/common/themeSwitch";
 export default function MenuBar() {
   return (
     <NextUINavbar
-      className="py-3 bg-default-foreground"
+      className="py-3 bg-default-foreground text-default-50"
       maxWidth="xl"
       position="sticky"
     >
@@ -75,10 +75,10 @@ export default function MenuBar() {
       </NavbarContent>
 
       <NavbarMenu className="mt-5">
-        <div className="mx-4 mt-2 flex flex-col gap-2">
+        <div className="mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link className="text-default-600" href={item.href}>
+              <Link className="text-default-200 font-bold" href={item.href}>
                 {item.label}
               </Link>
             </NavbarMenuItem>

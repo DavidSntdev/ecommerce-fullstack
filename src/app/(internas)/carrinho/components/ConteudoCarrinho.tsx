@@ -34,8 +34,10 @@ export default function ConteudoCarrinho() {
         {carrinho.length > 0 ? (
           carrinho.map((produto) => {
             const produtoCarrinho = carrinho.find(
-              (produto) => produto.id === produto.id
+              (prod) => prod.id === produto.id
             );
+            const priceTotal =
+              produto.price * (produtoCarrinho?.quantidade || 1);
 
             return (
               <div
@@ -53,14 +55,8 @@ export default function ConteudoCarrinho() {
                   </div>
                   <div className="flex flex-col justify-center w-[150px]">
                     <div>{produto.nome}</div>
-                    <div>Quantidade: {produtoCarrinho?.quantidade || 0}</div>
-                    <div>
-                      R${" "}
-                      {(
-                        produto.price * (produtoCarrinho?.quantidade || 1)
-                      ).toFixed(0)}
-                      .00
-                    </div>
+                    <div>Quantidade: {produtoCarrinho?.quantidade || 1}</div>
+                    <div>R$ {priceTotal.toFixed(2)}</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-center pr-5">
