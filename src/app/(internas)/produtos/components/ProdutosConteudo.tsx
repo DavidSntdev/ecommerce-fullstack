@@ -31,7 +31,7 @@ export default function ProdutosConteudo() {
         <motion.div
           key={pagina}
           animate={{ opacity: 1, y: 0 }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full gap-3"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full"
           exit={{ opacity: 0, y: 20 }}
           initial={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}

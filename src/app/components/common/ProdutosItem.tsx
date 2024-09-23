@@ -13,7 +13,7 @@ export default function ProdutosItem(props: ProdutosItemProps) {
   return (
     <Card
       key={props.produto.id}
-      className="w-[75%] lg:w-[90%] border-1 border-default-800 bg-default-800 text-default-100 rounded-md justify-self-center"
+      className="w-[75%] lg:w-[90%] border-1 border-default-800 bg-default-800 text-default-100 rounded-md justify-self-center my-2"
       shadow="md"
     >
       <CardBody className="overflow-visible relative p-0">
