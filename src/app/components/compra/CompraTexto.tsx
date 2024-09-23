@@ -8,6 +8,17 @@ import Mochila from "../common/Mochila";
 
 export default function CompraTexto(props: ConteudoCompraProps) {
   const [quantidade, setQuantidade] = useState<number>(1);
+  const produto = props.produto.nome;
+  const preco = props.produto.price;
+  const total = (preco * quantidade).toFixed(2);
+
+  const gerarMensagemCompra = () => {
+    let mensagem = "Quero comprar: \n";
+    mensagem += `${produto} \n`;
+    mensagem += `Valor: R$ ${total}`;
+
+    return encodeURIComponent(mensagem);
+  };
 
   const handleMinusClick = () => {
     if (quantidade > 1) setQuantidade((prev) => prev - 1);
@@ -21,7 +32,7 @@ export default function CompraTexto(props: ConteudoCompraProps) {
     <div className="md:w-1/2 flex flex-col justify-between w-full py-5">
       <div className="flex flex-col gap-2">
         <h1 className="text-xl font-bold">
-          {props.produto.nome || "Produto não encontrado"}
+          {produto || "Produto não encontrado"}
         </h1>
         <div className="flex flex-col">
           <p className="text-lg">
@@ -32,11 +43,7 @@ export default function CompraTexto(props: ConteudoCompraProps) {
       <div className="flex w-full flex-col mt-10 gap-5">
         <div>
           <p className="text-green-600 dark:text-green-400 font-bold text-2xl">
-            R${" "}
-            {quantidade > 1
-              ? (props.produto.price * quantidade).toFixed(0)
-              : (props.produto.price * quantidade).toFixed(2)}
-            {quantidade > 1 && ".00"}
+            R$ {total}
           </p>
         </div>
         <div className="flex justify-between mt-[-15px]">
@@ -67,15 +74,7 @@ export default function CompraTexto(props: ConteudoCompraProps) {
           <Button
             as="a"
             className="lg:w-8/12 w-full rounded-sm py-6 flex gap-2 bg-green-500 dark:bg-green-700"
-            href={`https://wa.me/5511971647488?text=Quero%20comprar%20${encodeURIComponent(
-              quantidade
-            )}%20${encodeURIComponent(
-              props.produto.nome
-            )}%20por%20R$%20${encodeURIComponent(
-              quantidade > 1
-                ? (props.produto.price * quantidade).toFixed(0)
-                : (props.produto.price * quantidade).toFixed(2)
-            )}${quantidade > 1 ? ".00" : ""}`}
+            href={`https://api.whatsapp.com/send?phone=5511971647488&text=${gerarMensagemCompra()}`}
             target="_blank"
           >
             Comprar via Whatsapp
