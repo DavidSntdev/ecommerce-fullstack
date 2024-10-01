@@ -41,11 +41,11 @@ export default function TamanhoProduto(props: TamanhoCompraProps) {
         </div>
       )}
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap">
         {tamanhosInfo.map((tamanho, index) => (
           <div
             key={index}
-            className="flex flex-col flex-wrap items-center cursor-pointer"
+            className="flex flex-col items-center cursor-pointer"
             onClick={() => selecionarTamanho(index)}
           >
             <span
