@@ -9,7 +9,7 @@ interface NavProdutosHomeProps extends BotoesNavProps {
 
 export default function NavProdutosHome(props: NavProdutosHomeProps) {
   return (
-    <div className="flex flex-col sm:flex-row px-16 justify-between gap-3 w-full sm:px-10 md:px-3">
+    <div className="flex flex-col sm:flex-row px-14 justify-between gap-3 w-full sm:px-10 md:px-3">
       <InputPesquisa
         textInput="Pesquise o nome do produto..."
         searchText={props.searchText}
