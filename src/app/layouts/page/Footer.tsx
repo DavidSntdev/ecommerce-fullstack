@@ -20,7 +20,6 @@ export default function Footer() {
           </div>
           <div className="col-span-12 md:col-span-3 flex flex-col gap-1 items-center md:items-stretch text-center md:text-start">
             <h1 className="text-xl md:text-2xl">Loja Online</h1>
-            <p className="text-sm text-default-500">Entrega e Devoluções</p>
             <p className="text-sm text-default-500">Negociação via Whatsapp</p>
             <p className="text-sm text-default-500">Endereço da Loja</p>
           </div>
@@ -29,7 +28,7 @@ export default function Footer() {
             <p className="text-sm text-default-500">Dona da Loja</p>
             <p className="text-sm text-default-500">Desenvolvedor</p>
           </div>
-          <div className="col-span-12 md:col-span-3 flex flex-col items-center lg:items-start">
+          <div className="col-span-12 md:col-span-3 flex flex-col items-center lg:items-end">
             <h1 className="text-xl md:text-2xl">Desenvolvimento</h1>
             <p className="text-default-500 flex gap-1 items-center">
               Copyright <FaRegCopyright /> David Santos
@@ -45,7 +44,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between gap-2">
+        <div className="flex flex-row justify-center md:justify-between gap-2">
           <div className="flex justify-center md:justify-start gap-3">
             <Link isExternal href="https://wa.me/5511971647488">
               <FaWhatsapp className="text-green-600 cursor-pointer" size={40} />

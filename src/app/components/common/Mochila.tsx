@@ -1,6 +1,6 @@
 "use client";
-import { ConteudoCompraProps } from "@/app/(internas)/produtos/[link]/components/ConteudoCompra";
 import { useCarrinho } from "@/context/CarrinhoContext";
+import { ConteudoCompraProps } from "@/core/model/interfaces/PropsProdutos";
 import { useEffect, useState } from "react";
 import {
   TbShoppingBagCheck,
@@ -33,7 +33,12 @@ export default function Mochila(props: ConteudoCompraProps) {
           quantidade + (props.quantidade || 1)
         );
       } else {
-        adicionarProduto(props.produto, props.quantidade);
+        adicionarProduto(
+          props.produto,
+          props.quantidade,
+          props.cor || "Padrão",
+          props.tamanho || "Sem tamanho"
+        );
         setIsCarrinho(true);
       }
       setMostrarCheck(true);
@@ -57,7 +62,7 @@ export default function Mochila(props: ConteudoCompraProps) {
         className="text-green-500 cursor-pointer"
       />
     ) : (
-      <>
+      <div className="flex gap-2">
         <TbShoppingBagPlus
           size={props.size || 25}
           onClick={handleCarrinhoClick.adicionar}
@@ -68,7 +73,7 @@ export default function Mochila(props: ConteudoCompraProps) {
           onClick={handleCarrinhoClick.remover}
           className="text-red-500 cursor-pointer"
         />
-      </>
+      </div>
     )
   ) : (
     <TbShoppingBagPlus

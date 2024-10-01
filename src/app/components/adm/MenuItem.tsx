@@ -11,10 +11,10 @@ export default function MenuItem(props: MenuItemProps) {
   return (
     <Link
       href={props.url}
-      className="flex gap-2 px-5 py-3 items-center hover:bg-default-900"
+      className="flex gap-2 px-5 py-3 items-center hover:bg-default-900 rounded-2xl"
     >
-      <props.icone className="text-zinc-200" />
-      <span className="text-zinc-200">{props.texto}</span>
+      <props.icone className="text-default-50" />
+      <span className="text-default-50">{props.texto}</span>
     </Link>
   );
 }

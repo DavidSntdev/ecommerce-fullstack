@@ -21,7 +21,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/faviconcart.ico" type="image/x-icon" />
       </head>
-      <body className="bg-default-900 min-h-screen max-h-full">
+      <body className="bg-default-900 min-h-screen max-h-full text-default-50">
         <NextUIProvider>
           <NextThemesProvider attribute="class" defaultTheme="light">
             <FavoritosProvider>

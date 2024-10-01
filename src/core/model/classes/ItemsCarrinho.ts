@@ -3,6 +3,8 @@ import Produto from "../interfaces/Produto";
 
 interface ProdutoCarrinho extends Produto {
   quantidade: number;
+  cor: string;
+  tamanho: string;
 }
 
 class ItemsCarrinho implements Carrinho {
@@ -12,14 +14,19 @@ class ItemsCarrinho implements Carrinho {
     this.carrinho = carrinho;
   }
 
-  adicionarProduto(produto: Produto, quantidade: number = 1): void {
+  adicionarProduto(
+    produto: Produto,
+    quantidade: number = 1,
+    cor: string = "Padrão",
+    tamanho: string = "Sem tamanho"
+  ): void {
     const produtoExistente = this.carrinho.find(
       (item) => item.id === produto.id
     );
     if (produtoExistente) {
       produtoExistente.quantidade += quantidade;
     } else {
-      this.carrinho.push({ ...produto, quantidade });
+      this.carrinho.push({ ...produto, quantidade, cor, tamanho });
     }
   }
 

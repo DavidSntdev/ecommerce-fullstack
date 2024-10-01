@@ -26,7 +26,7 @@ export default function ImagemInicial(props: ImagemInicialProps) {
   }, []);
 
   return (
-    <div className="flex flex-col items-center relative gap-5">
+    <div className="flex flex-col items-center">
       <Image
         alt="fundo"
         src={isMobile ? props.fundoMobile : props.fundoDesktop}
@@ -34,8 +34,8 @@ export default function ImagemInicial(props: ImagemInicialProps) {
       />
       <Button
         as="a"
-        className="absolute top-[65%] md:top-[75%] lg:top-[80%] px-20 h-[60px] bg-default-50 opacity-40 border-2 border-default-900 text-default-900 text-xl font-bold"
-        radius="sm"
+        className="mt-[-60px] px-5 h-[50px] bg-transparent hover:bg-default-900 hover:text-default-50 text-default-50 text-xl font-bold"
+        radius="md"
         href={props.url}
       >
         {props.textButton}

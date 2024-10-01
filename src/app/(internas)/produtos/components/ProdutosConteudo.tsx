@@ -10,8 +10,9 @@ export default function ProdutosConteudo() {
   const [pagina, setPagina] = useState<number>(1);
   const { produtos } = UseProdutos();
 
+  const produtosEstoque = produtos.filter((produto) => produto.estoque);
   const produtosPorPag = 10;
-  const totalProdutos = produtos.length;
+  const totalProdutos = produtosEstoque.length;
   const totalPages = Math.ceil(totalProdutos / produtosPorPag);
 
   const handlePageChange = (pag: number) => {
@@ -19,7 +20,7 @@ export default function ProdutosConteudo() {
   };
 
   const startIndex = (pagina - 1) * produtosPorPag;
-  const currentProdutos = produtos.slice(
+  const currentProdutos = produtosEstoque.slice(
     startIndex,
     startIndex + produtosPorPag
   );
@@ -31,7 +32,7 @@ export default function ProdutosConteudo() {
         <motion.div
           key={pagina}
           animate={{ opacity: 1, y: 0 }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full gap-3"
           exit={{ opacity: 0, y: 20 }}
           initial={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
@@ -46,7 +47,7 @@ export default function ProdutosConteudo() {
         </motion.div>
       </AnimatePresence>
       <Pagination
-        initialPage={1}
+        initialPage={pagina || 1}
         total={totalPages}
         onChange={handlePageChange}
       />

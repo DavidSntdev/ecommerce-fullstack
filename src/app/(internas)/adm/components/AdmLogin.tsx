@@ -36,8 +36,8 @@ export default function AdmLogin(props: AdmLoginProps) {
   };
 
   return (
-    <div className="w-full flex p-10 justify-center text-default-50">
-      <div className="w-60 flex flex-col items-center gap-3">
+    <div className="w-full flex p-10 justify-center">
+      <div className="w-60 flex flex-col items-center text-default-50 gap-3">
         <Input
           type="password"
           label="Senha"

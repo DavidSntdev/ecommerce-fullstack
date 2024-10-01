@@ -4,7 +4,7 @@ import Titulo from "@/app/components/shared/Titulos";
 
 export default function FavoritoPag() {
   return (
-    <LayoutPrincipal className="py-4">
+    <LayoutPrincipal className="py-4 w-full">
       <Titulo titulo="Favoritos" />
       <ConteudoFav />
     </LayoutPrincipal>

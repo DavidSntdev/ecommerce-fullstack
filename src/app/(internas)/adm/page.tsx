@@ -5,11 +5,10 @@ import AdmPagina from "./components/AdmPagina";
 import { useState } from "react";
 import AdmLogin from "./components/AdmLogin";
 
-
 export default function Adm() {
   const [logado, setLogado] = useState<boolean>(false);
   return (
-    <Pagina className="flex gap-5 w-full">
+    <Pagina className="flex flex-col w-full">
       {logado ? <AdmPagina /> : <AdmLogin setLogado={setLogado} />}
     </Pagina>
   );

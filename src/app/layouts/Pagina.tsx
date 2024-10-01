@@ -1,9 +1,4 @@
-import { ReactNode } from "react";
-
-export interface PaginaProps {
-  children: ReactNode;
-  className?: string;
-}
+import { PaginaProps } from "@/core/model/interfaces/Props";
 
 export default function Pagina(props: PaginaProps) {
   return (

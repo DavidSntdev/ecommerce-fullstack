@@ -1,6 +1,6 @@
 "use client";
-import { ConteudoCompraProps } from "@/app/(internas)/produtos/[link]/components/ConteudoCompra";
 import { useFavoritos } from "@/context/FavoritosContext";
+import { ConteudoCompraProps } from "@/core/model/interfaces/PropsProdutos";
 import { useEffect, useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 

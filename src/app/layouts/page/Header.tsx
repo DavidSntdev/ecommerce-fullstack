@@ -1,3 +1,5 @@
+"use client";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import {
   Navbar as NextUINavbar,
@@ -9,14 +11,16 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/navbar";
 import Link from "next/link";
-import { TbShoppingCart } from "react-icons/tb";
-import { FaRegHeart } from "react-icons/fa";
 import { ThemeSwitch } from "@/app/components/common/themeSwitch";
+import CartIcon from "@/app/components/home/header/CartIcon";
+import FavIcon from "@/app/components/home/header/FavIcon";
 
-export default function MenuBar() {
+export default function Header() {
+  const pathname = usePathname();
+
   return (
     <NextUINavbar
-      className="py-3 bg-default-foreground text-default-50"
+      className="py-3 bg-default-foreground"
       maxWidth="xl"
       position="sticky"
     >
@@ -34,6 +38,7 @@ export default function MenuBar() {
           ))}
         </div>
       </NavbarContent>
+
       <NavbarContent>
         <NavbarBrand className="gap-3 w-full lg:justify-center text-default-100 text-xl">
           <Link
@@ -45,17 +50,14 @@ export default function MenuBar() {
           </Link>
         </NavbarBrand>
       </NavbarContent>
+
       <NavbarContent
         className="hidden lg:flex basis-1/5 sm:basis-full"
         justify="end"
       >
         <NavbarItem className="hidden lg:flex gap-4 text-default-100">
-          <Link href={siteConfig.cart.href}>
-            <TbShoppingCart className="cursor-pointer" size={25} />
-          </Link>
-          <Link href={siteConfig.fav.href}>
-            <FaRegHeart className="cursor-pointer" size={25} />
-          </Link>
+          <CartIcon pathname={pathname} />
+          <FavIcon pathname={pathname} />
         </NavbarItem>
         <ThemeSwitch />
       </NavbarContent>
@@ -64,21 +66,17 @@ export default function MenuBar() {
         className="lg:hidden basis-1 pl-4 text-default-100"
         justify="end"
       >
-        <Link href={siteConfig.cart.href}>
-          <TbShoppingCart className="cursor-pointer " size={25} />
-        </Link>
-        <Link href={siteConfig.fav.href}>
-          <FaRegHeart className="cursor-pointer" size={25} />
-        </Link>
+        <CartIcon pathname={pathname} />
+        <FavIcon pathname={pathname} />
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarMenu className="mt-5">
-        <div className="mt-2 flex flex-col gap-2">
+        <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link className="text-default-200 font-bold" href={item.href}>
+              <Link className="text-default-600" href={item.href}>
                 {item.label}
               </Link>
             </NavbarMenuItem>

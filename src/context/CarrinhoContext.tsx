@@ -8,6 +8,7 @@ import {
 } from "react";
 import ItemsCarrinho from "@/core/model/classes/ItemsCarrinho";
 import Produto from "@/core/model/interfaces/Produto";
+
 interface CarrinhoProviderProps {
   children: ReactNode;
 }
@@ -21,12 +22,20 @@ export const useCarrinho = () => {
 };
 
 const CarrinhoContext = createContext<{
-  adicionarProduto: (produto: Produto, quantidade?: number) => void;
+  adicionarProduto: (
+    produto: Produto,
+    quantidade?: number,
+    cor?: string,
+    tamanho?: string
+  ) => void;
   removerProduto: (id: string) => void;
   atualizarQuantidade: (id: string, quantidade: number) => void;
-  listarCarrinho: () => (Produto & { quantidade: number })[];
+  listarCarrinho: () => (Produto & { quantidade: number } & { cor: string } & {
+    tamanho: string;
+  })[];
   carrinhoPorId: (id: string) => boolean;
-  quantidadeProduto: (id: string) => number; // Nova função
+  quantidadeProduto: (id: string) => number;
+  quantidadeTotal: () => number;
 } | null>(null);
 
 export const CarrinhoProvider = ({ children }: CarrinhoProviderProps) => {
@@ -49,9 +58,14 @@ export const CarrinhoProvider = ({ children }: CarrinhoProviderProps) => {
     }
   }, [carrinho]);
 
-  const adicionarProduto = (produto: Produto, quantidade: number = 1) => {
+  const adicionarProduto = (
+    produto: Produto,
+    quantidade: number = 1,
+    cor: string = "Padrão",
+    tamanho: string = "Sem tamanho"
+  ) => {
     if (carrinho) {
-      carrinho.adicionarProduto(produto, quantidade);
+      carrinho.adicionarProduto(produto, quantidade, cor, tamanho);
       setCarrinho(new ItemsCarrinho(carrinho.listarCarrinho()));
     }
   };
@@ -82,6 +96,14 @@ export const CarrinhoProvider = ({ children }: CarrinhoProviderProps) => {
     return carrinho ? carrinho.quantidadeProduto(id) : 0;
   };
 
+  const quantidadeTotal = () => {
+    return carrinho
+      ? carrinho
+          .listarCarrinho()
+          .reduce((total, item) => total + item.quantidade, 0)
+      : 0;
+  };
+
   return (
     <CarrinhoContext.Provider
       value={{
@@ -91,6 +113,7 @@ export const CarrinhoProvider = ({ children }: CarrinhoProviderProps) => {
         listarCarrinho,
         carrinhoPorId,
         quantidadeProduto,
+        quantidadeTotal,
       }}
     >
       {children}

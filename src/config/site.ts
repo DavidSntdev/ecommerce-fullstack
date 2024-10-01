@@ -22,15 +22,8 @@ export const siteConfig = {
       label: "Produtos",
       href: "/produtos",
     },
-    {
-      label: "Carrinho",
-      href: "/carrinho",
-    },
-    {
-      label: "Favoritos",
-      href: "/favoritos",
-    },
   ],
+  
   cart: {
     label: "carrinho",
     href: "/carrinho",
