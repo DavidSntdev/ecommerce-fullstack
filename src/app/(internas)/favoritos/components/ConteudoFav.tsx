@@ -15,6 +15,7 @@ export default function ConteudoFav() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 w-full">
           {favoritos.map((produto: Produto) => (
             <ProdutosItem
+              className="w-[75%] lg:w-[90%]"
               key={produto.id}
               produto={produto}
               irParaCompra={`/produto/${produto.id}`}

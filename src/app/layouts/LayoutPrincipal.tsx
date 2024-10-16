@@ -5,7 +5,7 @@ import { PaginaProps } from "@/core/model/interfaces/Props";
 
 export default function LayoutPrincipal(props: PaginaProps) {
   return (
-    <Pagina className="w-full mx-auto flex flex-col justify-between">
+    <Pagina className="w-full mx-auto flex flex-col bg-rosa dark:bg-default-100 justify-between">
       <div className="flex flex-col items-center">
         <Header />
         <div className={`${props.className} max-w-7xl place-self-center`}>

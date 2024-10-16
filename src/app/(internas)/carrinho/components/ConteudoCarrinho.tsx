@@ -47,7 +47,7 @@ export default function ConteudoCarrinho() {
             );
           })
         ) : (
-          <p className="text-xl col-span-full place-self-center text-default-50">
+          <p className="text-xl col-span-full place-self-center text-rosa03">
             Você não tem produtos no carrinho ainda.
           </p>
         )}

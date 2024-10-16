@@ -11,11 +11,11 @@ export default function InputPesquisa(props: InputPesquisaProps) {
   return (
     <Input
       classNames={{
-        base: "max-w-full sm:max-w-[16rem] h-10",
-        mainWrapper: "h-full",
-        input: "text-small font-bold",
+        base: "max-w-full sm:max-w-[16rem] h-10 text-rosa05 dark:text-rosa",
+        mainWrapper: "h-full text-rosa05 dark:text-rosa",
+        input: "text-small font-bold text-rosa05 dark:text-rosa",
         inputWrapper:
-          "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
+          "h-full font-normal text-rosa05 bg-rosa01 dark:bg-rosa04 dark:text-rosa",
       }}
       placeholder={props.textInput}
       size="sm"

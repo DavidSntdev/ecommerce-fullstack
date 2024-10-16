@@ -59,14 +59,14 @@ export default function Mochila(props: ConteudoCompraProps) {
       <TbShoppingBagCheck
         size={props.size || 25}
         onClick={handleCarrinhoClick.remover}
-        className="text-green-500 cursor-pointer"
+        className="text-green-700 cursor-pointer"
       />
     ) : (
       <div className="flex gap-2">
         <TbShoppingBagPlus
           size={props.size || 25}
           onClick={handleCarrinhoClick.adicionar}
-          className="text-default-50 cursor-pointer"
+          className="text-rosa03 cursor-pointer"
         />
         <TbShoppingBagX
           size={props.size || 25}

@@ -4,7 +4,7 @@ import InfoProdutoCarrinho from "./InfoProdutoCarrinho";
 
 export default function ProdutoCarrinho(props: ProdutoCarrinhoProps) {
   return (
-    <div key={props.produto.id} className="flex text-default-50">
+    <div key={props.produto.id} className="flex text-rosa01">
       <ImagemInfo produto={props.produto} />
       <InfoProdutoCarrinho
         produto={props.produto}

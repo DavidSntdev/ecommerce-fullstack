@@ -29,7 +29,7 @@ export default function CompraFooter(props: ConteudoCompraProps) {
             cor={props.cor}
             tamanho={props.tamanho}
           />
-          <Coracao produto={props.produto} size={35} />
+          <Coracao produto={props.produto} size={35} className="text-rosa05" />
         </div>
       </div>
       <BotaoCompra

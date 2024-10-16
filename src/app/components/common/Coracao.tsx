@@ -23,17 +23,19 @@ export default function Coracao(props: ConteudoCompraProps) {
     }
   };
 
+  const styleVazio = props.className ? props.className : "text-rosa01";
+
   return isFavorito ? (
     <FaHeart
       size={props.size || 25}
       onClick={handleFavoritoClick}
-      className="text-red-700 cursor-pointer"
+      className="fill-rosa05 cursor-pointer"
     />
   ) : (
     <FaRegHeart
       size={props.size || 25}
       onClick={handleFavoritoClick}
-      className="cursor-pointer"
+      className={`${styleVazio} cursor-pointer`}
     />
   );
 }

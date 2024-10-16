@@ -32,9 +32,9 @@ export default function TamanhoProduto(props: TamanhoCompraProps) {
     <div className="flex flex-col mt-3">
       {tamanhoSelecionado !== null && (
         <div className="mb-2 text-xl">
-          <span className="font-bold text-default-400 flex gap-2">
+          <span className="font-bold text-rosa05 flex gap-2">
             Tamanho:
-            <span className="text-default-50">
+            <span className="text-rosa04">
               {tamanhosInfo[tamanhoSelecionado]}
             </span>
           </span>
@@ -49,8 +49,8 @@ export default function TamanhoProduto(props: TamanhoCompraProps) {
             onClick={() => selecionarTamanho(index)}
           >
             <span
-              className={`px-3 py-2 rounded-xl text-default-50 border-1 border-default-50 hover:bg-default-800 bg-default-foreground ${
-                tamanhoSelecionado === index ? "ring-2 ring-indigo-500" : ""
+              className={`px-3 py-2 rounded-xl text-default-50 border-none hover:bg-rosa04/80 bg-rosa04 ${
+                tamanhoSelecionado === index && "ring-2 ring-rosa05"
               }`}
             >
               {tamanho}

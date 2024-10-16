@@ -7,9 +7,9 @@ export default function RemoverInfo(props: ProdutoCarrinhoProps) {
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <span className="hidden md:flex font-bold text-default-500">Excluir</span>
+      <span className="hidden md:flex font-bold text-rosa05">Excluir</span>
       <CiCircleRemove
-        className="cursor-pointer text-default-400"
+        className="cursor-pointer text-rosa04"
         size={30}
         onClick={() => removerProduto(props.id || "")}
       />

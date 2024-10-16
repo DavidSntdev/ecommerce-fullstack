@@ -69,7 +69,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
               "rounded-lg",
               "flex items-center justify-center",
               "group-data-[selected=true]:bg-transparent",
-              "!text-default-100",
+              "!text-rosa03 dark:!text-default-900",
               "pt-px",
               "px-0",
               "mx-0",

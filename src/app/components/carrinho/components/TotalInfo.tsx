@@ -5,8 +5,8 @@ export default function TotalInfo(props: ProdutoCarrinhoProps) {
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <span className="hidden md:flex font-bold text-default-500">Total</span>
-      <div className="flex flex-col">
+      <span className="hidden md:flex font-bold text-rosa05">Total</span>
+      <div className="flex flex-col text-rosa01">
         <div>R$ {total.toFixed(2)}</div>
       </div>
     </div>

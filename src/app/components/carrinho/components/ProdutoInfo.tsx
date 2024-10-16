@@ -6,7 +6,7 @@ import TamanhoInfo from "./produto/TamanhoInfo";
 export default function ProdutoInfo(props: ProdutoCarrinhoProps) {
   return (
     <div className="flex flex-col gap-2 md:w-[250px] items-center md:items-start">
-      <span className="hidden md:flex font-bold text-default-500">Produto</span>
+      <span className="hidden md:flex font-bold text-rosa05">Produto</span>
       <div className="flex flex-col">
         <NomeInfo nome={props.produto.nome || "Nome indisponivel"} />
         <CorInfo cor={props.cor} />

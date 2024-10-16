@@ -5,7 +5,7 @@ export default function BotoesNav(props: BotoesNavProps) {
   return (
     <>
       <Button
-        color="secondary"
+        color="danger"
         variant="light"
         onClick={() => {
           props.setPagina((prev) => (prev > 1 ? prev - 1 : prev));
@@ -14,7 +14,7 @@ export default function BotoesNav(props: BotoesNavProps) {
         Anterior
       </Button>
       <Button
-        color="primary"
+        color="danger"
         variant="light"
         onClick={() => {
           props.setPagina((prev) => (prev < props.totalPag ? prev + 1 : prev));

@@ -6,6 +6,8 @@ export interface QuantidadeProps {
 }
 
 export default function QuantidadeCompra(props: QuantidadeProps) {
+  const quantidadeStyle = props.quantidade < 2 ? "text-rosa01" : "text-rosa05";
+
   return (
     <div className="flex gap-5 items-center">
       <button
@@ -13,9 +15,7 @@ export default function QuantidadeCompra(props: QuantidadeProps) {
         disabled={(props.quantidade || 1) < 2}
       >
         <CiCircleMinus
-          className={`${
-            props.quantidade < 2 ? "text-default-600" : "text-default-100"
-          } cursor-pointer`}
+          className={`${quantidadeStyle} cursor-pointer`}
           size={40}
         />
       </button>

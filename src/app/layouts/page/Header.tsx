@@ -20,12 +20,12 @@ export default function Header() {
 
   return (
     <NextUINavbar
-      className="py-3 bg-default-foreground"
+      className="py-3 bg-rosa01 dark:bg-default-50"
       maxWidth="xl"
       position="sticky"
     >
       <NavbarContent
-        className="hidden lg:flex basis-1/5 sm:basis-full text-default-100"
+        className="hidden lg:flex basis-1/5 sm:basis-full text-rosa03 dark:text-default-900"
         justify="start"
       >
         <div className="hidden lg:flex gap-4 justify-start ml-2">
@@ -40,7 +40,7 @@ export default function Header() {
       </NavbarContent>
 
       <NavbarContent>
-        <NavbarBrand className="gap-3 w-full lg:justify-center text-default-100 text-xl">
+        <NavbarBrand className="gap-3 w-full lg:justify-center text-rosa05 dark:text-rosa04 text-xl">
           <Link
             className="flex gap-2 lg:flex-col lg:gap-0 items-center justify-center"
             href="/"
@@ -55,17 +55,14 @@ export default function Header() {
         className="hidden lg:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden lg:flex gap-4 text-default-100">
+        <NavbarItem className="hidden lg:flex gap-4">
           <CartIcon pathname={pathname} />
           <FavIcon pathname={pathname} />
         </NavbarItem>
         <ThemeSwitch />
       </NavbarContent>
 
-      <NavbarContent
-        className="lg:hidden basis-1 pl-4 text-default-100"
-        justify="end"
-      >
+      <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
         <CartIcon pathname={pathname} />
         <FavIcon pathname={pathname} />
         <ThemeSwitch />
@@ -76,7 +73,7 @@ export default function Header() {
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link className="text-default-600" href={item.href}>
+              <Link className="text-rosa02" href={item.href}>
                 {item.label}
               </Link>
             </NavbarMenuItem>

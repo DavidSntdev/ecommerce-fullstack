@@ -30,11 +30,9 @@ export default function CoresProduto(props: CoresCompraProps) {
   return (
     <div className="flex flex-col gap-2">
       {corSelecionada !== null && (
-        <div className="text-xl text-default-400 font-bold flex gap-2">
+        <div className="text-xl text-rosa05 font-bold flex gap-2">
           Cor:
-          <span style={{ color: coresInfo[corSelecionada].codigo }}>
-            {coresInfo[corSelecionada].nome}
-          </span>
+          <span className="text-rosa04">{coresInfo[corSelecionada].nome}</span>
         </div>
       )}
 
@@ -49,8 +47,8 @@ export default function CoresProduto(props: CoresCompraProps) {
             >
               <span
                 style={{ backgroundColor: cor.codigo }}
-                className={`p-5 rounded-xl text-white border-1 border-default-50 ${
-                  corSelecionada === index ? "ring-2 ring-indigo-500" : ""
+                className={`p-5 rounded-xl text-rosa01 border-none ${
+                  corSelecionada === index && "ring-2 ring-rosa05"
                 }`}
               ></span>
             </div>

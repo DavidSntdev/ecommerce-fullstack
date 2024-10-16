@@ -25,28 +25,43 @@ export default function ProdutosConteudo() {
     startIndex + produtosPorPag
   );
 
+  const produtoVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 50 },
+  };
+
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-4">
       <Titulo titulo="Lingeries" />
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         <motion.div
           key={pagina}
-          animate={{ opacity: 1, y: 0 }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full gap-3"
-          exit={{ opacity: 0, y: 20 }}
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.3 }}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full gap-2"
         >
           {currentProdutos.map((produto) => (
-            <ProdutosItem
+            <motion.div
               key={produto.id}
-              produto={produto}
-              irParaCompra={`/produtos/${produto.link}`}
-            />
+              initial="hidden"
+              animate="visible"
+              className="w-[80%] lg:w-[90%] mx-auto"
+              exit="exit"
+              variants={produtoVariants}
+              transition={{ duration: 0.4 }}
+            >
+              <ProdutosItem
+                produto={produto}
+                irParaCompra={`/produtos/${produto.link}`}
+              />
+            </motion.div>
           ))}
         </motion.div>
       </AnimatePresence>
       <Pagination
+        classNames={{
+          item: `bg-rosa05 text-rosa01 `,
+          cursor: "bg-rosa03",
+        }}
         initialPage={pagina || 1}
         total={totalPages}
         onChange={handlePageChange}

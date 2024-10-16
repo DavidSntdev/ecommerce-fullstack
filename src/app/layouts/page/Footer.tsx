@@ -10,7 +10,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="w-full flex items-center text-default-50 flex-col justify-center py-3 bg-default-foreground">
+    <footer className="w-full flex items-center text-rosa05 dark:text-rosa04 dark:bg-default-50 flex-col justify-center py-3 bg-rosa01">
       <div className="h-auto flex flex-col justify-between max-w-7xl w-full px-5 md:px-10 md:py-5 gap-5">
         <div className="grid grid-cols-12 gap-3">
           <div className="col-span-12 md:col-span-3 items-center md:items-stretch text-center md:text-start">
@@ -20,18 +20,26 @@ export default function Footer() {
           </div>
           <div className="col-span-12 md:col-span-3 flex flex-col gap-1 items-center md:items-stretch text-center md:text-start">
             <h1 className="text-xl md:text-2xl">Loja Online</h1>
-            <p className="text-sm text-default-500">Negociação via Whatsapp</p>
-            <p className="text-sm text-default-500">Endereço da Loja</p>
+            <p className="text-sm text-rosa03 dark:text-default-800">
+              Negociação via Whatsapp
+            </p>
+            <p className="text-sm text-rosa03 dark:text-default-800">
+              Endereço da Loja
+            </p>
           </div>
           <div className="col-span-12 md:col-span-3 flex flex-col gap-1 items-center md:items-stretch text-center md:text-start">
             <h1 className="text-xl md:text-2xl">Contatos</h1>
-            <p className="text-sm text-default-500">Dona da Loja</p>
-            <p className="text-sm text-default-500">Desenvolvedor</p>
+            <p className="text-sm text-rosa03 dark:text-default-800">
+              Dona da Loja
+            </p>
+            <p className="text-sm text-rosa03 dark:text-default-800">
+              Desenvolvedor
+            </p>
           </div>
           <div className="col-span-12 md:col-span-3 flex flex-col items-center lg:items-end">
             <h1 className="text-xl md:text-2xl">Desenvolvimento</h1>
-            <p className="text-default-500 flex gap-1 items-center">
-              Copyright <FaRegCopyright /> David Santos
+            <p className="text-rosa03 dark:text-default-800 flex gap-1 items-center">
+              Copyright <FaRegCopyright /> Leide Lingeries
             </p>
             <Link
               isExternal
@@ -39,8 +47,10 @@ export default function Footer() {
               href="https://github.com/DavidSntdev"
               title="Github do desenvolvedor"
             >
-              <span className="text-default-500">Desenvolvido por</span>
-              <p className="text-primary">David Santos</p>
+              <span className="text-rosa03 dark:text-default-800">
+                Desenvolvido por
+              </span>
+              <p className="text-rosa03 dark:text-default-800">David Santos</p>
             </Link>
           </div>
         </div>

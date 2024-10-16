@@ -6,7 +6,7 @@ import ProdutoInfo from "./components/ProdutoInfo";
 
 export default function InfoProdutoCarrinho(props: ProdutoCarrinhoProps) {
   return (
-    <div className="flex w-full lg:flex-row justify-between px-5 py-3 bg-default-800 rounded-r-2xl">
+    <div className="flex w-full lg:flex-row justify-between px-5 py-3 bg-rosa03 rounded-r-2xl">
       <div className="hidden md:flex w-full justify-between">
         <ProdutoInfo
           produto={props.produto}

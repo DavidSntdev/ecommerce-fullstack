@@ -7,10 +7,8 @@ export default function QuantidadeInfo(props: ProdutoCarrinhoProps) {
 
   return (
     <div className="flex flex-col gap-2">
-      <span className="hidden md:flex font-bold text-default-500">
-        Quantidade
-      </span>
-      <div className="flex gap-5 justify-center">
+      <span className="hidden md:flex font-bold text-rosa05">Quantidade</span>
+      <div className="flex gap-5 justify-center text-rosa01">
         <button
           onClick={() =>
             atualizarQuantidade(props.id || "", (props.quantidade || 1) - 1)
@@ -19,9 +17,7 @@ export default function QuantidadeInfo(props: ProdutoCarrinhoProps) {
         >
           <CiCircleMinus
             className={`${
-              (props.quantidade || 1) < 2
-                ? "text-default-600"
-                : "text-default-100"
+              (props.quantidade || 1) < 2 ? "text-rosa04" : "text-rosa01"
             } cursor-pointer`}
             size={25}
           />

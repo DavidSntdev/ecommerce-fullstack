@@ -13,6 +13,13 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+
+        rosa: "#FFE5EC",
+        rosa01: "#FFC2D1",
+        rosa02: "#FF8FAB",
+        rosa03: "#FB6F92",
+        rosa04: "#FF3D6F",
+        rosa05: "#E50F40",
       },
     },
   },

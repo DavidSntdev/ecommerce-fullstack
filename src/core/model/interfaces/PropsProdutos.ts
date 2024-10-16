@@ -11,6 +11,7 @@ export interface ConteudoCompraProps {
   quantidade?: number;
   cor?: string;
   tamanho?: string;
+  className?: string;
 }
 export interface ProdutoCarrinhoProps {
   produto: Partial<Produto>;

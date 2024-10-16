@@ -7,13 +7,14 @@ import Coracao from "./Coracao";
 export interface ProdutosItemProps {
   produto: Produto;
   irParaCompra: string;
+  className?: string;
 }
 
 export default function ProdutosItem(props: ProdutosItemProps) {
   return (
     <Card
       key={props.produto.id}
-      className="w-[75%] lg:w-[90%] border-1 border-default-800 bg-default-800 text-default-100 rounded-md justify-self-center"
+      className={`border-1 ${props.className} border-rosa01 dark:border-rosa03 bg-rosa02 dark:bg-rosa03 dark:hover:bg-rosa02 rounded-md justify-self-center hover:bg-rosa02/75`}
       shadow="md"
     >
       <CardBody className="overflow-visible relative p-0">
@@ -33,14 +34,16 @@ export default function ProdutosItem(props: ProdutosItemProps) {
             className="flex flex-col sm:flex-row cursor-pointer"
             href={props.irParaCompra}
           >
-            <p>{props.produto.nome}</p>
+            <p className="text-rosa05 dark:text-rosa font-semibold">
+              {props.produto.nome}
+            </p>
             <p className="block sm:hidden">R${props.produto.price}</p>
           </Link>
           <div className="flex sm:hidden place-self-center">
             <Coracao produto={props.produto} />
           </div>
           <div className="hidden sm:flex flex-row justify-between">
-            <p>R$ {props.produto.price}</p>
+            <p className="text-rosa font-semibold">R$ {props.produto.price}</p>
             <Coracao produto={props.produto} />
           </div>
         </footer>

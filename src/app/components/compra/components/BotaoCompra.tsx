@@ -25,7 +25,7 @@ export default function BotaoCompra(props: ConteudoCompraProps) {
         href={`https://api.whatsapp.com/send?phone=${NUMERO_ZAP}&text=${gerarMensagemCompra()}`}
         target="_blank"
       >
-        Comprar via Whatsapp
+        <span className="font-semibold">Comprar via Whatsapp</span>
         <IoLogoWhatsapp
           className="text-green-700 dark:text-green-400"
           size={20}

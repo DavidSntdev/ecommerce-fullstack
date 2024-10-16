@@ -9,9 +9,12 @@ export default function FavIcon(props: FavIconProps) {
   return (
     <Link href={siteConfig.fav.href}>
       <FaRegHeart
-        className="cursor-pointer text-default-50"
+        className={`cursor-pointer ${
+          props.pathname === siteConfig.fav.href
+            ? "text-rosa05"
+            : "text-rosa03 dark:text-default-900"
+        }`}
         size={25}
-        color={props.pathname === siteConfig.fav.href ? "red" : ""}
       />
     </Link>
   );
