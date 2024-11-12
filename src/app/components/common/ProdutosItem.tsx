@@ -14,7 +14,7 @@ export default function ProdutosItem(props: ProdutosItemProps) {
   return (
     <Card
       key={props.produto.id}
-      className={`border-1 ${props.className} border-rosa01 dark:border-rosa03 bg-rosa02 dark:bg-rosa03 dark:hover:bg-rosa02 rounded-md justify-self-center hover:bg-rosa02/75`}
+      className={`border-1 w-full ${props.className} border-rosa01 dark:border-rosa03 bg-rosa02 dark:bg-rosa03 dark:hover:bg-rosa02 rounded-md justify-self-center hover:bg-rosa02/75`}
       shadow="md"
     >
       <CardBody className="overflow-visible relative p-0">
